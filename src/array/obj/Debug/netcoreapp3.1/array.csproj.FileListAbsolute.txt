@@ -1,0 +1,12 @@
+/Users/pedrolopes/Projects/collections/src/array/bin/Debug/netcoreapp3.1/array.deps.json
+/Users/pedrolopes/Projects/collections/src/array/bin/Debug/netcoreapp3.1/array.runtimeconfig.json
+/Users/pedrolopes/Projects/collections/src/array/bin/Debug/netcoreapp3.1/array.runtimeconfig.dev.json
+/Users/pedrolopes/Projects/collections/src/array/bin/Debug/netcoreapp3.1/array.dll
+/Users/pedrolopes/Projects/collections/src/array/bin/Debug/netcoreapp3.1/array.pdb
+/Users/pedrolopes/Projects/collections/src/array/obj/Debug/netcoreapp3.1/array.csprojAssemblyReference.cache
+/Users/pedrolopes/Projects/collections/src/array/obj/Debug/netcoreapp3.1/array.AssemblyInfoInputs.cache
+/Users/pedrolopes/Projects/collections/src/array/obj/Debug/netcoreapp3.1/array.AssemblyInfo.cs
+/Users/pedrolopes/Projects/collections/src/array/obj/Debug/netcoreapp3.1/array.csproj.CoreCompileInputs.cache
+/Users/pedrolopes/Projects/collections/src/array/obj/Debug/netcoreapp3.1/array.dll
+/Users/pedrolopes/Projects/collections/src/array/obj/Debug/netcoreapp3.1/array.pdb
+/Users/pedrolopes/Projects/collections/src/array/obj/Debug/netcoreapp3.1/array.genruntimeconfig.cache
