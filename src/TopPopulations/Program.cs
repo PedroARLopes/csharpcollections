@@ -10,15 +10,28 @@ namespace TopPopulations
         {
             var reader = new CsvReader2(CSV_FILE_PATH);
 
-            //Country[] countries = reader.ReadFirstNCountries(10);
-            List<Country> countries = reader.ReadAllCountries();
-            Country lillliput = new Country("Lilliput", "LIL", "Somewhere", 2_000_000);
-            int lilliputIndex = countries.FindIndex(x => x.Population < 2_000_000);
-            countries.Insert(lilliputIndex, lillliput);
-            countries.RemoveAt(lilliputIndex);
 
-            foreach (Country country in countries)
-                Console.WriteLine($"{PopulationFormatter.FormatPopulation(country.Population).PadLeft(15)}: {country.Name}");
+            Console.WriteLine("Write country code to lookup");
+            var input = Console.ReadLine();
+
+
+            var countries = reader.ReadAllCountriesDict();
+            var country = countries.GetValueOrDefault(input);
+            if (country == null)
+
+                Console.WriteLine($"No country information found for country code {input}");
+            else
+                Console.WriteLine($"{PopulationFormatter.FormatPopulation(country.Population).PadLeft(15)}: {country.Name}, Country Code: {country.Code}");
+
+
+            /*
+            Country[] countries = reader.ReadFirstNCountries(10);
+            foreach (var country in countries)
+            {
+                var key = country.Key;
+                var value = country.Value;
+                Console.WriteLine($"{PopulationFormatter.FormatPopulation(value.Population).PadLeft(15)}: {value.Name}, Country Code: {key}");
+            }*/
         }
     }
 }

@@ -60,5 +60,32 @@ namespace TopPopulations
 
             return countries;
         }
+
+        public Dictionary<string, Country> ReadAllCountriesDict()
+        {
+            var countries = new Dictionary<string, Country>();
+
+            using (StreamReader sr = new StreamReader(_csvFilePath))
+            {
+                using (var csv = new CsvReader(sr, CultureInfo.InvariantCulture))
+                {
+                    var records = csv.GetRecords<Country>();
+                    foreach (Country country in records)
+                    {
+                        countries.Add(country.Code, country);
+                    }
+                }
+            }
+
+            return countries;
+        }
+
+
+        public Country SearchCountry(string code)
+        {
+            var countries = ReadAllCountriesDict();
+
+            return countries.GetValueOrDefault(code);
+        }
     }
 }
